@@ -372,8 +372,8 @@
       <div class="agenda-card">
         <div class="agenda-num">02</div>
         <div class="agenda-time">10 min</div>
-        <div class="agenda-title">Business context &amp; definice úspěchu</div>
-        <div class="agenda-desc">Proč projekt vznikl, co se musí změnit, SOW a kritéria úspěchu</div>
+        <div class="agenda-title">Proč modernizovat</div>
+        <div class="agenda-desc">Stávající situace, 4 klíčové problémy, cílový stav</div>
       </div>
       <div class="agenda-card">
         <div class="agenda-num">03</div>
@@ -461,55 +461,94 @@
   <!-- SLIDE 4: BUSINESS CONTEXT -->
   <div class="slide" id="slide-3">
     <div class="slide-label">02 &mdash; 10 min</div>
-    <div class="content-wrap" style="margin-top: 16px;">
-      <h1 class="slide-h1">Business context &amp; <span>proč projekt vznikl</span></h1>
-      <p class="slide-sub">Situace, která nás přivádí k modernizaci</p>
-      <div class="two-col" style="max-width: 1100px;">
-        <div>
-          <div class="card yellow-border" style="margin-bottom: 20px;">
-            <div class="card-title">Situace (Situation)</div>
-            <ul class="card-body">
-              <li>Datový stack postaven na Keboola + GoodData</li>
-              <li>Rostoucí objem dat a komplexita transformací</li>
-              <li>AI use cases na obzoru &mdash; stávající stack nepřipravený</li>
-              <li>Interní tlak na snižování nákladů a zvyšování spolehlivosti</li>
-            </ul>
-          </div>
-          <div class="card" style="border-color: rgba(255,80,80,0.2);">
-            <div class="card-title" style="color: #ff7070;">Komplikace (Complication)</div>
-            <ul class="card-body">
-              <li>Chybí dokumentace a monitoring transformací</li>
-              <li>Závislost na proprietárních nástrojích (vendor lock)</li>
-              <li>Data quality bez systematické kontroly</li>
-              <li>Omezená škálovatelnost pro ML / AI workloads</li>
-            </ul>
+    <div class="content-wrap" style="margin-top: 8px;">
+      <h1 class="slide-h1"><span>Proč</span> modernizovat</h1>
+      <p class="slide-sub">Stávající situace a kam směřujeme</p>
+
+      <!-- Key stats row -->
+      <div style="display: flex; gap: 32px; margin-bottom: 22px; width: 100%; max-width: 1100px;">
+        <div style="padding: 14px 24px; background: rgba(255,100,100,0.06); border: 1px solid rgba(255,100,100,0.2); border-radius: 10px; display: flex; gap: 16px; align-items: center;">
+          <div style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 38px; color: #ff7070; line-height: 1;">~95k</div>
+          <div>
+            <div style="font-size: 12px; color: rgba(255,255,255,0.75); font-weight: 600;">USD / rok</div>
+            <div style="font-size: 11px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px;">Keboola + GoodData</div>
           </div>
         </div>
-        <div>
-          <div class="card turquoise-border">
-            <div class="card-title" style="color: #50D2D2;">Řešení (Resolution) &mdash; tento projekt</div>
-            <ul class="card-body">
-              <li>Hloubková analýza současného stavu (as-is)</li>
-              <li>Doporučení cílové architektury (to-be)</li>
-              <li>AI use case assessment &amp; data readiness check</li>
-              <li>Migrační plán s ROI odůvodněním</li>
-              <li>Podklady pro rozhodnutí o migraci</li>
-            </ul>
+        <div style="padding: 14px 24px; background: rgba(255,100,100,0.06); border: 1px solid rgba(255,100,100,0.2); border-radius: 10px; display: flex; gap: 16px; align-items: center;">
+          <div style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 38px; color: #ff7070; line-height: 1;">2015</div>
+          <div>
+            <div style="font-size: 12px; color: rgba(255,255,255,0.75); font-weight: 600;">Datový model</div>
+            <div style="font-size: 11px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px;">Best practices roku 2015</div>
           </div>
-          <div style="margin-top: 20px; padding: 20px 24px; background: rgba(235,165,45,0.05); border-radius: 10px; border: 1px solid rgba(235,165,45,0.2);">
-            <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: #EBA52D; margin-bottom: 10px; font-weight: 700;">Scope dle SOW</div>
-            <div style="display: flex; gap: 24px;">
-              <div style="text-align: center;">
-                <div style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 36px; color: #EBA52D;">4</div>
-                <div style="font-size: 11px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px;">klíčové oblasti</div>
+        </div>
+      </div>
+
+      <div class="two-col" style="max-width: 1100px;">
+        <!-- Left: 4 problémy -->
+        <div class="card" style="border-color: rgba(255,100,100,0.25);">
+          <div class="card-title" style="color: #ff7070;">Stávající problémy</div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="min-width: 22px; height: 22px; border-radius: 50%; background: rgba(255,100,100,0.15); border: 1.5px solid #ff7070; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #ff7070; flex-shrink: 0; margin-top: 1px;">01</div>
+              <div>
+                <div style="font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 2px;">Zastaralá infrastruktura</div>
+                <div style="font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.4;">Nesplňuje moderní standardy, není AI-ready</div>
               </div>
-              <div style="text-align: center;">
-                <div style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 36px; color: #50D2D2;">6</div>
-                <div style="font-size: 11px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px;">týdnů analýzy</div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="min-width: 22px; height: 22px; border-radius: 50%; background: rgba(255,100,100,0.15); border: 1.5px solid #ff7070; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #ff7070; flex-shrink: 0; margin-top: 1px;">02</div>
+              <div>
+                <div style="font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 2px;">BUS factor &amp; absence dokumentace</div>
+                <div style="font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.4;">Nový vývoj závislý na klíčových jedincích, bez dokumentace je pomalý nebo nemožný</div>
               </div>
-              <div style="text-align: center;">
-                <div style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 36px; color: #fff;">1</div>
-                <div style="font-size: 11px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px;">rozhodovací report</div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="min-width: 22px; height: 22px; border-radius: 50%; background: rgba(255,100,100,0.15); border: 1.5px solid #ff7070; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #ff7070; flex-shrink: 0; margin-top: 1px;">03</div>
+              <div>
+                <div style="font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 2px;">Niche technologie</div>
+                <div style="font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.4;">GoodData ztěžuje přístup k talent poolu, hiring nových specialistů je přinejmenším obtížný</div>
+              </div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="min-width: 22px; height: 22px; border-radius: 50%; background: rgba(255,100,100,0.15); border: 1.5px solid #ff7070; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #ff7070; flex-shrink: 0; margin-top: 1px;">04</div>
+              <div>
+                <div style="font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 2px;">Pomalá reakce na business</div>
+                <div style="font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.4;">Monolitická platforma neumožňuje rychlé analýzy &mdash; např. pokles kapacit hoteliérů nestihnut včas při marketingové kampani</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Cílový stav -->
+        <div class="card turquoise-border">
+          <div class="card-title" style="color: #50D2D2;">Cílový stav</div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="min-width: 22px; height: 22px; border-radius: 50%; background: rgba(80,210,210,0.15); border: 1.5px solid #50D2D2; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #50D2D2; flex-shrink: 0; margin-top: 1px;">01</div>
+              <div>
+                <div style="font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 2px;">Best-in-class platforma</div>
+                <div style="font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.4;">Moderní, světově uznávaná datová platforma (Snowflake + dbt)</div>
+              </div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="min-width: 22px; height: 22px; border-radius: 50%; background: rgba(80,210,210,0.15); border: 1.5px solid #50D2D2; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #50D2D2; flex-shrink: 0; margin-top: 1px;">02</div>
+              <div>
+                <div style="font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 2px;">Rychlejší vývoj</div>
+                <div style="font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.4;">Tým vyvíjí datové produkty a reporty ve vyšší kvalitě a rychlosti</div>
+              </div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="min-width: 22px; height: 22px; border-radius: 50%; background: rgba(80,210,210,0.15); border: 1.5px solid #50D2D2; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #50D2D2; flex-shrink: 0; margin-top: 1px;">03</div>
+              <div>
+                <div style="font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 2px;">AI-ready platforma</div>
+                <div style="font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.4;">Prokázaná schopnost nasadit AI agenty nad vlastními datovými assety</div>
+              </div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="min-width: 22px; height: 22px; border-radius: 50%; background: rgba(80,210,210,0.15); border: 1.5px solid #50D2D2; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #50D2D2; flex-shrink: 0; margin-top: 1px;">04</div>
+              <div>
+                <div style="font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 2px;">Nižší provozní náklady</div>
+                <div style="font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.4;">Snížení operačních nákladů na obsluhu datového skladu &mdash; měřitelné před a po migraci</div>
               </div>
             </div>
           </div>
